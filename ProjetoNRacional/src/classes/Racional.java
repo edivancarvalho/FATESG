@@ -37,6 +37,26 @@ public class Racional {
         this.numerador = numerador;
     }
     
+    public void setObjeto(Racional objeto) throws Exception{
+        if (denominador != 0){
+            throw new Exception("Denominado não pode ser Diferente de Zero.");
+        }
+    }
     
+    public String get(){
+        return (numerador + "" + numerador);
+    }
     
+    public Racional adicionar(Racional objetoadicionar){
+        int aux1 = this.numerador;
+        int aux2 = objetoadicionar.denominador;
+         int resultado = 0;     
+        resultado = aux1 + aux1;
+        
+        return new Racional();
+    }
+
+    public void adicionar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

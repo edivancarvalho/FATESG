@@ -5,11 +5,15 @@
  */
 package gui;
 
+import classes.Racional;
+
 /**
  *
  * @author suporte
  */
 public class Tela extends javax.swing.JFrame {
+
+
 
     /**
      * Creates new form Tela
@@ -27,21 +31,103 @@ public class Tela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField_Numero1 = new javax.swing.JTextField();
+        jTextField_Numero2 = new javax.swing.JTextField();
+        jButton_Adicionar = new javax.swing.JButton();
+        jButton_Subtracao = new javax.swing.JButton();
+        jButton_Multiplicacao = new javax.swing.JButton();
+        jButton_Divisao = new javax.swing.JButton();
+        jButton_Igualdade = new javax.swing.JButton();
+        jTextField_Saida = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jButton_Adicionar.setText("+");
+        jButton_Adicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_AdicionarActionPerformed(evt);
+            }
+        });
+
+        jButton_Subtracao.setText("-");
+
+        jButton_Multiplicacao.setText("x");
+
+        jButton_Divisao.setText("/");
+
+        jButton_Igualdade.setText("=");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(114, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jTextField_Saida)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton_Adicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton_Subtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField_Numero1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTextField_Numero2)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton_Multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton_Divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(89, 89, 89)
+                            .addComponent(jButton_Igualdade, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jTextField_Saida, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Numero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Numero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_Adicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_Subtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_Multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_Divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addComponent(jButton_Igualdade, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_AdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AdicionarActionPerformed
+        // TODO add your handling code here:
+        // função Adição 
+        
+        try {
+//            int resultado = Integer.parseInt(jTextField_Numero1.getText());
+//            Racional primeiro = new Racional();
+//            primeiro.setNumerador(resultado);
+//            
+//            resultado = Integer.parseInt(jTextField_Numero1.getText());
+//            Racional segundo = new Racional();
+//            segundo.setNumerador(resultado);
+            
+            Racional adicao = new Racional();
+            adicao.adicionar();
+            String saida = "Valor: " + adicao.get();
+            
+        } catch (Exception erro) {
+        }
+    }//GEN-LAST:event_jButton_AdicionarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +165,13 @@ public class Tela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_Adicionar;
+    private javax.swing.JButton jButton_Divisao;
+    private javax.swing.JButton jButton_Igualdade;
+    private javax.swing.JButton jButton_Multiplicacao;
+    private javax.swing.JButton jButton_Subtracao;
+    private javax.swing.JTextField jTextField_Numero1;
+    private javax.swing.JTextField jTextField_Numero2;
+    private javax.swing.JTextField jTextField_Saida;
     // End of variables declaration//GEN-END:variables
 }
