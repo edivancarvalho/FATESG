@@ -38,7 +38,7 @@ public class Tela extends javax.swing.JFrame {
         jTextField_ParteImaginaria1 = new javax.swing.JTextField();
         jTextField_ParteReal2 = new javax.swing.JTextField();
         jTextField_ParteImaginaria2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        jButton_Subtracao = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -68,7 +68,7 @@ public class Tela extends javax.swing.JFrame {
 
         jLabel_N2.setText("N2");
 
-        jButton3.setText("-");
+        jButton_Subtracao.setText("-");
 
         jButton4.setText("*");
 
@@ -122,11 +122,11 @@ public class Tela extends javax.swing.JFrame {
                                             .addComponent(jTextField_ParteImaginaria2)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                                         .addComponent(jLabel5)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -135,7 +135,7 @@ public class Tela extends javax.swing.JFrame {
                                 .addGap(16, 16, 16)
                                 .addComponent(jLabel1)))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton_Subtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -168,7 +168,7 @@ public class Tela extends javax.swing.JFrame {
                         .addComponent(jLabel7)))
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(jButton_Subtracao)
                     .addComponent(jButton4)
                     .addComponent(jButton5)
                     .addComponent(jButton_Adicao)
@@ -186,24 +186,30 @@ public class Tela extends javax.swing.JFrame {
     private void jButton_AdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AdicaoActionPerformed
         // TODO add your handling code here:
         
+        
+        
+        
         NComplexo x = new NComplexo();
         x.set(10, 20);
         String saida = "valor: " + x.get();
-        
-        NComplexo y = new NComplexo(15,5);
+
+        NComplexo y = new NComplexo(15, 5);
         saida += "\nvalor de Y: " + y.get();
-        
+
         NComplexo w = new NComplexo(x);
         saida += "\nvalor de w: " + w.get() + "\n";
         // adicionando o y.set(w);
         y.set(w);
         NComplexo aux = x.adicionar(y);
-        saida += "valor  de aux = " + aux.get();
-        
-        
+        saida += "valor  de aux = " + aux.get() + "\n";
+
+        NComplexo adicao = new NComplexo();
+        adicao.adicionar(adicao);
+        saida += "valor de adição:  " + adicao.get()+ "\n";
+
         jTextArea_Saida.setText(saida);
-        
-        
+
+
     }//GEN-LAST:event_jButton_AdicaoActionPerformed
 
     /**
@@ -242,11 +248,11 @@ public class Tela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton_Adicao;
+    private javax.swing.JButton jButton_Subtracao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
