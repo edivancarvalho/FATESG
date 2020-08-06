@@ -3,7 +3,7 @@
 Arquitetura dos Programas
 
 * Gestão de Projetos
-* Padrões de Projeto
+* Padrões de Projetos
 * Arquitetura e Projeto de Software
 * Estrutura de Dados
 ---
