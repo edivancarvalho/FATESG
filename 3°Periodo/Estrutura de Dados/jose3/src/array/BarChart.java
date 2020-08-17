@@ -1,12 +1,12 @@
 package array;
+//  programa de impressão de gráfico de barras.
 
-/**
- * @author edivan
- */
 public class BarChart {
 
     public static void main(String[] args) {
+
         int array[] = {0, 0, 0, 0, 0, 0, 1, 2, 4, 2, 1};
+
         System.out.println("Grade distribution:");
 
 // Para cada elemento de array, gera saa de uma barra do gráfico
@@ -16,10 +16,9 @@ public class BarChart {
             if (counter == 10) {
                 System.out.printf("%5d: ", 100);
             } else {
-                System.out.printf("%02d-%02d: ", counter * 10,
+                System.out.printf("%02d-%02d: ",
                         counter * 10, counter * 10 + 9);
             }
-
             // imprime a barra de asteriscos
             for (int stars = 0; stars < array[counter]; stars++) {
                 System.out.print("*");
